@@ -13,7 +13,7 @@ using StringTools;
 class AndroidControlsSettingsSubState extends BaseOptionsMenu {
 	public function new() {
 		title = 'Android Settings For Virtual Pads And Hitbox';
-		rpcTitle = 'Virtual pads and hitbox Menu';
+		rpcTitle = 'Virtual Pads And Hitbox Menu';
         
 		var option:Option = new Option('Hitbox Style:', "Choose Your Hitbox Style How Are Want To Look Like On Gameplay.", 'hitboxSelection', 'string', 'Original', ['Original', 'New']);
 		addOption(option);
