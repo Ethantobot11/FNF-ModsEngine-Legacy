@@ -1,4 +1,4 @@
-package psychlua;
+package luas;
 
 #if sys
 import sys.FileSystem;

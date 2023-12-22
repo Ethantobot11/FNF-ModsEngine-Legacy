@@ -1,4 +1,4 @@
-package psychlua;
+package luas;
 
 import Type.ValueType;
 import haxe.Constraints;

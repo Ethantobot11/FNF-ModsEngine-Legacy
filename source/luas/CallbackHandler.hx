@@ -1,4 +1,4 @@
-package psychlua;
+package luas;
 
 class CallbackHandler
 {
