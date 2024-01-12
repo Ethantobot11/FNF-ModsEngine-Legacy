@@ -68,6 +68,7 @@ jobs:
           haxelib --quiet install hxjsonast
           haxelib --quiet install SScript 8.1.6
           haxelib --quiet git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
+          haxelib --quiet git linc-discord https://github.com/Aidan63/linc_discord-rpc
           haxelib --quiet git linc_luajit https://github.com/superpowers04/linc_luajit.git
           haxelib --quiet git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools.git
           haxelib --quiet git AndroidDialogs https://github.com/beihu235/AndroidDialogs.git
@@ -154,11 +155,24 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
+          haxelib setup ~/haxelib
+          haxelib --global update haxelib
+          haxelib --quiet install hxcpp 4.2.1 > /dev/null
+          haxelib --quiet install lime 8.0.2
+          haxelib --quiet install openfl 9.2.1
+          haxelib --quiet install flixel
+          haxelib --quiet run lime setup flixel
+          haxelib --quiet install flixel-tools
+          haxelib --quiet install flixel-ui
+          haxelib --quiet install flixel-addons
+          haxelib --quiet install tjson
+          haxelib --quiet install hxjsonast
+          haxelib --quiet install SScript 8.1.6
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null --quiet
-          haxelib install hmm --quiet
+          haxelib --quiet install hxcpp > /dev/null
+          haxelib --quiet install hmm
           haxelib run hmm install
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -182,9 +196,23 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
+          haxelib setup ~/haxelib
+          haxelib --global update haxelib
+          haxelib --quiet install hxcpp 4.2.1 > /dev/null
+          haxelib --quiet install lime 8.0.2
+          haxelib --quiet install openfl 9.2.1
+          haxelib --quiet install flixel
+          haxelib --quiet run lime setup flixel
+          haxelib --quiet install flixel-tools
+          haxelib --quiet install flixel-ui
+          haxelib --quiet install flixel-addons
+          haxelib --quiet install tjson
+          haxelib --quiet install hxjsonast
+          haxelib --quiet install SScript 8.1.6
           haxelib setup C:/haxelib
-          haxelib install hxcpp > /dev/null --quiet
-          haxelib install hmm --quiet
+          haxelib --quiet install hxcpp > /dev/null
+          haxelib --quiet install hmm
+          haxelib git linc-discord https://github.com/Aidan63/linc_discord-rpc
           haxelib run hmm install
         shell: cmd
       - name: Create Version Tag
@@ -210,8 +238,21 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null --quiet
-          haxelib install hmm --quiet
+          haxelib --global update haxelib
+          haxelib --quiet install hxcpp 4.2.1 > /dev/null
+          haxelib --quiet install lime 8.0.2
+          haxelib --quiet install openfl 9.2.1
+          haxelib --quiet install flixel
+          haxelib --quiet run lime setup flixel
+          haxelib --quiet install flixel-tools
+          haxelib --quiet install flixel-ui
+          haxelib --quiet install flixel-addons
+          haxelib --quiet install tjson
+          haxelib --quiet install hxjsonast
+          haxelib --quiet install SScript 8.1.6
+          haxelib setup ~/haxelib
+          haxelib --quiet install hxcpp > /dev/null
+          haxelib --quiet install hmm
           haxelib run hmm install
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
