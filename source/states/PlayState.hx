@@ -10,7 +10,7 @@ package states;
 // "function eventEarlyTrigger" - Used for making your event start a few MILLISECONDS earlier
 // "function triggerEvent" - Called when the song hits your event's timestamp, this is probably what you were looking for
 
-if android
+#if android
 import android.flixel.FlxButton;
 import android.flixel.FlxHitbox;
 import android.flixel.FlxNewHitbox;
