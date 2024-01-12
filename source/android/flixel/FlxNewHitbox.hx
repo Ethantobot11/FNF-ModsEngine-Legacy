@@ -10,7 +10,7 @@ class FlxNewHitbox extends FlxSpriteGroup {
 	public var buttonUp:FlxButton = new FlxButton(0, 0);
 	public var buttonRight:FlxButton = new FlxButton(0, 0);
     
-	public function new():Void {
+	public function new(): {
 		super();
         
 		var buttonLeftColor:Array<FlxColor>;
@@ -23,8 +23,7 @@ class FlxNewHitbox extends FlxSpriteGroup {
 			buttonDownColor = ClientPrefs.arrowHSV[1];
 			buttonUpColor = ClientPrefs.arrowHSV[2];
 			buttonRightColor = ClientPrefs.arrowHSV[3];
-		}
-		else {
+		} else {
 			buttonLeftColor = ClientPrefs.arrowHSV[0];
 			buttonDownColor = ClientPrefs.arrowHSV[1];
 			buttonUpColor = ClientPrefs.arrowHSV[2];
@@ -37,10 +36,9 @@ class FlxNewHitbox extends FlxSpriteGroup {
         add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonDownColor[0]));
         add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonUpColor[0]));
         add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonRightColor[0]));
-	    }
     }
     
-	override function destroy():Void {
+	override function destroy(): {
 		super.destroy();
         
 		buttonLeft = null;
@@ -49,7 +47,7 @@ class FlxNewHitbox extends FlxSpriteGroup {
 		buttonRight = null;
 	}
     
-	private function createHintGraphic(Width:Int, Height:Int, Color:Int = 0xFFFFFFFF):BitmapData {
+	private function createHintGraphic(Width:Int, Height:Int, Color:Int = 0xFFFFFF):BitmapData {
 		var shape:Shape = new Shape();
 		shape.graphics.beginFill(Color);
 		shape.graphics.lineStyle(10, Color, 1);
@@ -61,7 +59,7 @@ class FlxNewHitbox extends FlxSpriteGroup {
 		return bitmap;
 	}
     
-	private function createHint(X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFFFF):FlxButton {
+	private function createHint(X:Float, Y:Float, Width:Int, Height:Int, Color:Int = 0xFFFFFF):FlxButton {
 		var hint:FlxButton = new FlxButton(X, Y);
 		hint.loadGraphic(createHintGraphic(Width, Height, Color));
 		hint.solid = false;
