@@ -1,5 +1,9 @@
 package states;
 
+#if android
+import android.flixel.FlxButton;
+#end
+
 import backend.WeekData;
 import backend.Highscore;
 
@@ -90,6 +94,10 @@ class TitleState extends MusicBeatState
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
+		#if android
+		addVirtualPad(NONE, A);
+		#end
+		
 		super.create();
 
 		FlxG.save.bind('funkin', CoolUtil.getSavePath());
@@ -142,10 +150,10 @@ class TitleState extends MusicBeatState
 				titleJSON.gfx += 45;
 				titleJSON.gfy += 100;
 			case 'ALI':
-                titleJSON.gfx += -5000;
-                titleJSON.gfy += -5000;
-                titleJSON.titlex += 170;
-                titleJSON.titley += -20;
+                		titleJSON.gfx += -5000;
+                		titleJSON.gfy += -5000;
+                		titleJSON.titlex += 170;
+                		titleJSON.titley += -20;
 		}
 		#end
 
@@ -258,12 +266,12 @@ class TitleState extends MusicBeatState
 				gfDance.animation.addByIndices('danceLeft', 'BB Title Bump', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
 				gfDance.animation.addByIndices('danceRight', 'BB Title Bump', [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
 			case 'ALI':
-                logoBl.frames = Paths.getSparrowAtlas('modsEngineLogoBumpin');
-                logoBl.antialiasing = ClientPrefs.data.antialiasing;
+                		logoBl.frames = Paths.getSparrowAtlas('modsEngineLogoBumpin');
+                		logoBl.antialiasing = ClientPrefs.data.antialiasing;
 
-                logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
-                logoBl.animation.play('bump');
-                logoBl.updateHitbox();
+                		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
+                		logoBl.animation.play('bump');
+                		logoBl.updateHitbox();
 			#end
 
 			default:
@@ -381,15 +389,7 @@ class TitleState extends MusicBeatState
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER || controls.ACCEPT;
 
-		#if android
-		for (touch in FlxG.touches.list)
-		{
-			if (touch.justPressed)
-			{
-				pressedEnter = true;
-			}
-		}
-		#end
+		
 
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
@@ -629,7 +629,8 @@ class TitleState extends MusicBeatState
 					addMoreText('Night');
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Funkin');                 // credTextShit.text += '\nFunkin';
+					addMoreText('Funkin');         
+				// credTextShit.text += '\nFunkin';
 				case 17:
 				    addMoreText('Mods');
 				// credTextShit.text += '\nMods';
@@ -667,7 +668,7 @@ class TitleState extends MusicBeatState
 					case 'BBPANZU':
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
 					case 'ALI':
-                        sound = FlxG.sound.play(Paths.sound('JingleAli'));
+                        			sound = FlxG.sound.play(Paths.sound('JingleAli'));
 
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
