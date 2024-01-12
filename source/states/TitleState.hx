@@ -608,7 +608,6 @@ class TitleState extends MusicBeatState
 					deleteCoolText();
 					ngSpr.visible = false;
 				// credTextShit.visible = false;
-
 				// credTextShit.text = 'Shoutouts Tom Fulp';
 				// credTextShit.screenCenter();
 				case 10:
@@ -632,12 +631,11 @@ class TitleState extends MusicBeatState
 					addMoreText('Funkin');         
 				// credTextShit.text += '\nFunkin';
 				case 17:
-				    addMoreText('Mods');
+				    	addMoreText('Mods');
 				// credTextShit.text += '\nMods';
 				case 18:
-				    addMoreText('Engine');
+				    	addMoreText('Engine');
 				// credTextShit.text += '\nEngine'
-
 				case 19:
 					skipIntro();
 			}
