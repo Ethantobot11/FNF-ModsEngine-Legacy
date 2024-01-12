@@ -36,9 +36,8 @@ class FlxNewHitbox extends FlxSpriteGroup {
             add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonUpColor[0]));
             add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonRightColor[0]));
             }
-		}
+	}
         scrollFactor.set();
-    }
     
 	override function destroy():Void {
 		super.destroy();
