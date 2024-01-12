@@ -549,6 +549,9 @@ class TitleState extends MusicBeatState
 		}
 	}
 
+	private function createHint(X:Float, Y:Float, Graphic:String, Color:Int = 0xFFFFFF): {
+	hint.loadGraphic(FlxGraphic.fromFrame(FlxAtlasFrames.fromSparrow(Assets.getBitmapData('assets/android/keyboard.png');
+	}
 	private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
 	public static var closedState:Bool = false;
 	override function beatHit()
