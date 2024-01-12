@@ -38,6 +38,7 @@ class FlxNewHitbox extends FlxSpriteGroup {
             }
 	}
         scrollFactor.set();
+	}
     
 	override function destroy():Void {
 		super.destroy();
