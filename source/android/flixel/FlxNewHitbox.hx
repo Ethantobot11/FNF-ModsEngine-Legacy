@@ -30,15 +30,15 @@ class FlxNewHitbox extends FlxSpriteGroup {
 			buttonUpColor = ClientPrefs.arrowHSV[2];
 			buttonRightColor = ClientPrefs.arrowHSV[3];
 		}
-        {
-            add(buttonLeft = createHint(0, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonLeftColor[0]));
-            add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonDownColor[0]));
-            add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonUpColor[0]));
-            add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonRightColor[0]));
-            }
-	}
-        scrollFactor.set();
-	}
+		
+		scrollFactor.set();
+		
+        add(buttonLeft = createHint(0, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonLeftColor[0]));
+        add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonDownColor[0]));
+        add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonUpColor[0]));
+        add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 1), buttonRightColor[0]));
+	    }
+    }
     
 	override function destroy():Void {
 		super.destroy();
