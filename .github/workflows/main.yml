@@ -68,7 +68,7 @@ jobs:
           haxelib --quiet install hxjsonast
           haxelib --quiet install SScript 8.1.6
           haxelib --quiet git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
-          haxelib --quiet git linc-discord https://github.com/Aidan63/linc_discord-rpc
+          haxelib --quiet git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib --quiet git linc_luajit https://github.com/superpowers04/linc_luajit.git
           haxelib --quiet git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools.git
           haxelib --quiet git AndroidDialogs https://github.com/beihu235/AndroidDialogs.git
@@ -173,6 +173,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib --quiet install hxcpp > /dev/null
           haxelib --quiet install hmm
+          haxelib --quiet git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib run hmm install
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -212,7 +213,7 @@ jobs:
           haxelib setup C:/haxelib
           haxelib --quiet install hxcpp > /dev/null
           haxelib --quiet install hmm
-          haxelib git linc-discord https://github.com/Aidan63/linc_discord-rpc
+          haxelib --quiet git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib run hmm install
         shell: cmd
       - name: Create Version Tag
@@ -253,6 +254,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib --quiet install hxcpp > /dev/null
           haxelib --quiet install hmm
+          haxelib --quiet git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib run hmm install
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
