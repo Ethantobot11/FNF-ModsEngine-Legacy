@@ -14,7 +14,7 @@ class FlxNewHitbox extends FlxSpriteGroup {
 		super();
         
 		var buttonLeftColor:Array<FlxColor>;
-        var buttonDownColor:Array<FlxColor>;
+        	var buttonDownColor:Array<FlxColor>;
 		var buttonUpColor:Array<FlxColor>;
 		var buttonRightColor:Array<FlxColor>;
 		
