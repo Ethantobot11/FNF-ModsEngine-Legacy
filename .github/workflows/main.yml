@@ -69,6 +69,7 @@ jobs:
           haxelib install SScript 8.1.6
           haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
+          haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
           haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
           haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools.git
           haxelib git AndroidDialogs https://github.com/beihu235/AndroidDialogs.git
@@ -173,6 +174,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
+          haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
@@ -211,6 +213,7 @@ jobs:
           haxelib setup C:/haxelib
           haxelib install hxcpp > /dev/null
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
+          haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
         shell: cmd
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -250,6 +253,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
+          haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
