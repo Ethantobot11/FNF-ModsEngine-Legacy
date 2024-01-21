@@ -166,15 +166,14 @@ class FreeplayState extends MusicBeatState
 		textBG.alpha = 0.6;
 		add(textBG);
 
-        	#if android
+		#if PRELOAD_ALL
+		#if android
         	var leText.String = "Press X To Listen To The Song / Press C To Open The Gameplay Changers Menu / Press Y To Reset Your Score And Accuracy.";
         	var size:Int = 16;
         	#else
         	var leText.String = "Press C To Open The Gameplay Changers Menu / Press Y To Reset Your Score And Accuracy.";
         	var size:Int = 18;
         	#end
-
-		#if PRELOAD_ALL
 		var leText:String = "Press SPACE To Listen To The Song / Press CTRL To Open The Gameplay Changers Menu / Press RESET To Reset Your Score And Accuracy.";
 		var size:Int = 16;
 		#else
