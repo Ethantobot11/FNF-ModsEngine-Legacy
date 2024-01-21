@@ -67,6 +67,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install SScript 8.1.6
+          haxelib install hxCodec
           haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
           haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
@@ -169,6 +170,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install SScript 8.1.6
+          haxelib install hxCodec
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
@@ -211,6 +213,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install SScript 8.1.6
+          haxelib install hxCodec
           haxelib setup C:/haxelib
           haxelib install hxcpp > /dev/null
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
@@ -252,6 +255,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install SScript 8.1.6
+          haxelib install hxCodec
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
