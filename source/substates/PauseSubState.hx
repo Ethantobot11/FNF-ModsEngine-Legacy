@@ -2,6 +2,8 @@ package substates;
 
 #if android
 import android.flixel.FlxButton;
+#end
+
 import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
