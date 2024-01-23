@@ -383,7 +383,7 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		
+		if (FlxG.keys.justPressed.ENTER #if android || MusicBeatState.virtualPad.buttonA.justPressed #end)
 		FlxG.sound.play(Paths.sound('confirmMenu'));
 
 		grpWeekText.members[curWeek].startFlashing();
