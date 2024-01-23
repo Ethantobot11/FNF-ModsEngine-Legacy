@@ -383,6 +383,18 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+
+		grpWeekText.members[curWeek].startFlashing();
+
+		for (char in grpWeekCharacters.members)
+		{
+			if (char.character != '' && char.hasConfirmAnimation)
+			{
+				char.animation.play('confirm');
+			}
+		}
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
