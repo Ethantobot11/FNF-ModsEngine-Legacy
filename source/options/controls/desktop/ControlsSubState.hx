@@ -1,4 +1,4 @@
-package options.controls.linux, windows and macos;
+package options.controls.desktop;
 
 import backend.InputFormatter;
 import flixel.addons.display.FlxBackdrop;
