@@ -13,16 +13,16 @@ class OptionsState extends MusicBeatState
     var options.Array<String> = ['Note Colors', 'Android Controls', 'Android Controls Settings', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
     #end
 
-	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
-	private var grpOptions:FlxTypedGroup<Alphabet>;
-	private static var curSelected:Int = 0;
-	public static var menuBG:FlxSprite;
-	public static var onPlayState:Bool = false;
+    var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
+    private var grpOptions:FlxTypedGroup<Alphabet>;
+    private static var curSelected:Int = 0;
+    public static var menuBG:FlxSprite;
+    public static var onPlayState:Bool = false;
 
-	function openSelectedSubstate(label:String) {
-        #if android
-        switch(label) {
-            case 'Note Colors':
+    function openSelectedSubstate(label:String) {
+    #if android
+    switch(label) {
+	    case 'Note Colors':
                 openSubState(new options.NotesSubState());
             case 'Android Controls':
                 openSubState(new options.controls.android.AndroidControlsSubState());
@@ -36,22 +36,22 @@ class OptionsState extends MusicBeatState
                 openSubState(new options.GameplaySettingsSubState());
             case 'Adjust Delay and Combo':
                 openSubState(new options.NoteOffsetState());
-        #end
+    #end
 
-		switch(label) {
-			case 'Note Colors':
-				openSubState(new options.NotesSubState());
-			case 'Controls':
-				openSubState(new options.linux, macos and windows.ControlsSubState());
-			case 'Graphics':
-				openSubState(new options.GraphicsSettingsSubState());
-			case 'Visuals and UI':
-				openSubState(new options.VisualsUISubState());
-			case 'Gameplay':
-				openSubState(new options.GameplaySettingsSubState());
-			case 'Adjust Delay and Combo':
-				MusicBeatState.switchState(new options.NoteOffsetState());
-		}
+    switch(label) {
+	    case 'Note Colors':
+		openSubState(new options.NotesSubState());
+	    case 'Controls':
+		openSubState(new options.controls.desktop.ControlsSubState());
+	    case 'Graphics':
+		openSubState(new options.GraphicsSettingsSubState());
+	    case 'Visuals and UI':
+		openSubState(new options.VisualsUISubState());
+	    case 'Gameplay':
+		openSubState(new options.GameplaySettingsSubState());
+	    case 'Adjust Delay and Combo':
+		MusicBeatState.switchState(new options.NoteOffsetState());
+	    }
 	}
 
 	var selectorLeft:Alphabet;
