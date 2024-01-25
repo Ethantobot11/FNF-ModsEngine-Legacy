@@ -115,6 +115,7 @@
 	<!--Psych stuff needed-->
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
 	<haxelib name="SScript" if="HSCRIPT_ALLOWED"/>
+	<haxelib name="HScript" if="HSCRIPT_ALLOWED"/>
 	<haxelib name="hxCodec" if="VIDEOS_ALLOWED"/>
 	<haxelib name="discord_rpc"/>
 	<haxelib name="tjson" />
