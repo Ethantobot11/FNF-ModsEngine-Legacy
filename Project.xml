@@ -38,15 +38,9 @@
 
 	<!--Desktop-specific-->
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
-
-	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false"/>
 	
 	<!--Android-sepcific-->
 	<window if="android" orietation="landscape" fullscreen="true" width="1280" height="720" resizable="false"/>
-
-	<!--Ios-specific-->
-	<window if="ios" orietation="landscape" fullscreen="true" width="1280" height="720" resizable="false"/>
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
@@ -112,8 +106,8 @@
 	<haxelib name="flixel" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="flixel-addons" />
-	<haxelib name="AndroidDialogs" if = "mobile || android || ios"/>
-	<haxelib name="devicelanguage" if = "mobile || android || ios"/>
+	<haxelib name="AndroidDialogs" if = "android"/>
+	<haxelib name="devicelanguage" if = "android"/>
 
 	<!--Psych stuff needed-->
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
