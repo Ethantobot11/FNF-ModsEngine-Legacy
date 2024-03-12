@@ -1,4 +1,4 @@
-package options.controls.phone;
+package options.controls.android;
 
 import flixel.addons.transition.FlxTransitionableState;
 import lime.utils.Assets;
@@ -10,9 +10,9 @@ import openfl.Lib;
 
 using StringTools;
 
-class PhoneControlsSettingsSubState extends BaseOptionsMenu {
+class AndroidControlsSettingsSubState extends BaseOptionsMenu {
 	public function new() {
-		title = 'Phone Settings For Virtual Pads And Hitbox';
+		title = 'Android Settings For Virtual Pads And Hitbox';
 		rpcTitle = 'Virtual Pads And Hitbox Menu';
         
 		var option:Option = new Option('Hitbox Style:', "Choose Your Hitbox Style How Are Want To Look Like On Gameplay.", 'hitboxSelection', 'string', 'Original', ['Original', 'New']);
