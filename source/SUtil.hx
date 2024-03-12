@@ -1,7 +1,11 @@
 package;
 
+#if mobile
 #if android
+#if ios
 import android.Tools;
+#end
+#end
 #end
 
 import lime.app.Application;
@@ -19,19 +23,28 @@ using StringTools;
 
 class SUtil
 {
+
+	#if mobile
 	#if android
+	#if ios
 	private static var aDir:String = null;
+	#end
+	#end
 	#end
 
 	public static function getPath():String
 	{
+		#if mobile
 		#if android
+		#if ios
 		if (aDir != null && aDir.length > 0)
 			return aDir;
 		else
 			return aDir = Tools.getExternalStorageDirectory() + '/.ModsEngine/';
 		#else
 		return '';
+		#end
+		#end
 		#end
 	}
 
@@ -65,7 +78,9 @@ class SUtil
 		Application.current.window.alert(description, title);
 	}
 
+	#if mobile
 	#if android
+	#if ios
 	public static function saveContent(fileName:String = 'file', fileExtension:String = '.json', fileData:String = 'You Forgot Something To Add In Your Code')
 	{
 		if (!FileSystem.exists(SUtil.getPath() + 'saves'))
@@ -84,5 +99,7 @@ class SUtil
 		if (!FileSystem.exists(savePath))
 			File.saveBytes(savePath, OpenFlAssets.getBytes(copyPath));
 	}
+	#end
+	#end
 	#end
 }
