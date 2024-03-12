@@ -144,57 +144,6 @@ jobs:
         with:
           name: Mods Engine Android
           path: export/release/android/bin/app/build/outputs/apk/debug
-  IOS:
-    runs-on: macos-13
-    steps:
-      - name: Checkout
-        uses: actions/checkout@main
-
-      - name: Setup Haxe
-        uses: krdlab/setup-haxe@master
-        with:
-          haxe-version: 4.3.3
-
-      - name: Install Haxelib
-        run: |
-          haxelib --global update haxelib
-          haxelib install hxcpp 4.2.1 > /dev/null
-          haxelib install lime 8.0.2
-          haxelib install openfl 9.2.2
-          haxelib install flixel
-          haxelib run lime setup flixel
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
-          haxelib install SScript 8.1.6
-          haxelib install HScript 2.5.0
-          haxelib install hxCodec
-          haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
-          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
-          haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
-          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
-          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools.git
-          haxelib git AndroidDialogs https://github.com/beihu235/AndroidDialogs.git
-          haxelib git devicelanguage https://github.com/beihu235/devicelanguage.git
-
-      - name: Compile
-        run: haxelib run lime build ios --app-version="4.0.0-${{ github.run_id}}"
-
-      - name: Make Ipa
-        run: |
-          cd export/release/ios/build/*-iphoneos
-          mkdir Payload
-          mv *.app Payload
-          zip -r PsychEngine.ipa Payload
-
-      - name: Upload Artifact
-        if: ${{ success() }}
-        uses: actions/upload-artifact@main
-        with:
-          name: Mods Engine IOS
-          path: export/release/ios/build/Release-iphoneos/*.ipa
   Linux:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
