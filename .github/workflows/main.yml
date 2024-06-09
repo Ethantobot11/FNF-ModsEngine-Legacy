@@ -265,7 +265,6 @@ jobs:
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
           haxelib git flxanimate https://github.com/ShadowMario/flxanimate.git
           haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
-          haxelib git lime https://github.com/FunkinCrew/lime.git
         shell: cmd
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
