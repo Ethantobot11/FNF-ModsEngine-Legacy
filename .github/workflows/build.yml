@@ -61,7 +61,7 @@ jobs:
         run: |
           cd ${{ runner.temp }}
           echo "Downloading Android NDK r28..."
-          curl -sSfL -o android-ndk.tar.xz "https://github.com/MobilePorting/android-ndk-cosmo/releases/download/r28/android-ndk-r28-unix.tar.xz"
+          curl -sSfL -o android-ndk.tar.xz "https://github.com/MobilePorting/android-ndk-custom/releases/download/r28/android-ndk-r28-unix-ape.tar.xz"
           echo "Extracting Android NDK r28..."
           tar -xf android-ndk.tar.xz
           echo "NDK r28 successfully downloaded and extracted!"
