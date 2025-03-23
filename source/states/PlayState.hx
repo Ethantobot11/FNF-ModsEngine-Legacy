@@ -49,10 +49,10 @@ import objects.*;
 import states.stages.objects.*;
 
 #if LUA_ALLOWED
-import psychlua.*;
+import luas.*;
 #else
-import psychlua.LuaUtils;
-import psychlua.HScript;
+import luas.LuaUtils;
+import luas.HScript;
 #end
 
 #if SScript
