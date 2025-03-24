@@ -2,8 +2,8 @@ package luas;
 
 import flixel.FlxBasic;
 import objects.Character;
-import psychlua.FunkinLua;
-import psychlua.CustomSubstate;
+import luas.FunkinLua;
+import luas.CustomSubstate;
 
 #if (HSCRIPT_ALLOWED && SScript >= "3.0.0")
 import tea.SScript;
