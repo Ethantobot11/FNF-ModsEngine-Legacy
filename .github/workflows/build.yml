@@ -20,7 +20,7 @@ on:
         type: string
 
 env:
-  HAXE_VERSION: 4.3.2
+  HAXE_VERSION: 4.3.7
   PROJECT_NAME: ModsEngine
 
 jobs:
@@ -61,10 +61,10 @@ jobs:
         run: |
           cd ${{ runner.temp }}
           echo "Downloading Android NDK r28..."
-          curl -sSfL -o android-ndk.tar.xz "https://github.com/MobilePorting/android-ndk-custom/releases/download/r28/android-ndk-r28-unix-ape.tar.xz"
-          echo "Extracting Android NDK r28..."
+          curl -sSfL -o android-ndk.tar.xz "https://github.com/MobilePorting/android-ndk-custom/releases/download/r28c/android-ndk-r28c-unix-ape.tar.xz"
+          echo "Extracting Android NDK r28c..."
           tar -xf android-ndk.tar.xz
-          echo "NDK r28 successfully downloaded and extracted!"
+          echo "NDK r28c<<<<<<<<<<<<<< successfully downloaded and extracted!"
 
       - name: Install Libraries
         run: |
@@ -75,8 +75,8 @@ jobs:
         if: inputs.name == 'Android'
         run: |
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
-          haxelib run lime config ANDROID_NDK_ROOT ${{ runner.temp }}/android-ndk-r28
-          haxelib run lime config JAVA_HOME $JAVA_HOME_17_X64
+          haxelib run lime config ANDROID_NDK_ROOT ${{ runner.temp }}/android-ndk-r28c
+          haxelib run lime config JAVA_HOME $JAVA_HOME_17
           haxelib run lime config ANDROID_SETUP true
 
       - name: Compile
