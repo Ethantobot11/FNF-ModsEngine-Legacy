@@ -560,10 +560,10 @@ class TitleState extends MusicBeatState
 			textGroup.remove(textGroup.members[0], true);
 		}
 	}
-
-	#if android
+ 
+	#if (android && ios)
 	private function createHint(X:Float, Y:Float, Graphic:String, Color:Int = 0xFFFFFFFF):
-	hint.loadGraphic(FlxGraphic.fromFrame(FlxAtlasFrames.fromSparrow(Assets.getBitmapData('assets/android/keyboard.png');
+	hint.loadGraphic(FlxGraphic.fromFrame(FlxAtlasFrames.fromSparrow(Assets.getBitmapData('assets/android/keyboard.png')));
 	#end
 	
 	private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
