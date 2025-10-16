@@ -37,6 +37,10 @@ import flixel.addons.display.FlxRuntimeShader;
 import openfl.filters.ShaderFilter;
 #end
 
+#if VIDEO_ALLOWED
+import objects.VideoSprite;
+#end
+
 import objects.Note.EventNote;
 import objects.*;
 import states.stages.objects.*;
