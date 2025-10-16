@@ -56,6 +56,7 @@ import luas.HScript;
 import tea.SScript;
 #end
 
+
 /**
  * This is where all the Gameplay stuff happens and is managed
  *
@@ -262,8 +263,9 @@ class PlayState extends MusicBeatState
 	public var startCallback:Void->Void = null;
 	public var endCallback:Void->Void = null;
 
-	public var luaTouchPad:TouchPad;
 
+	public var luaTouchPad:TouchPad;
+		
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
