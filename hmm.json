@@ -3,6 +3,7 @@
     {
       "name": "lime",
       "type": "git",
+      "dir": null,
       "ref": "main",
       "url": "https://github.com/AliAlafandy/lime"
     },
@@ -14,6 +15,7 @@
     {
       "name": "flixel",
       "type": "git",
+      "dir": null,
       "ref": "master",
       "url": "https://github.com/AliAlafandy/flixel-alafandy"
     },
@@ -35,6 +37,7 @@
     {
       "name": "hxcpp",
       "type": "git",
+      "dir": null,
       "ref": "main",
       "url": "https://github.com/AliAlafandy/hxcpp"
     },
@@ -63,6 +66,7 @@
     {
       "name": "linc_luajit",
       "type": "git",
+      "dir": null,
       "ref": "master",
       "url": "https://github.com/AliAlafandy/linc_luajit"
     },
