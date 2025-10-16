@@ -3,23 +3,20 @@
     {
       "name": "lime",
       "type": "git",
-      "dir": null,
       "ref": "main",
-      "url": "https://github.com/MobilePorting/lime"
+      "url": "https://github.com/AliAlafandy/lime"
     },
     {
       "name": "openfl",
-      "type": "git",
+      "type": "haxelib",
       "dir": null,
-      "ref": "9.3.2",
-      "url": "https://github.com/MobilePorting/openfl"
+      "ref": "9.4.1",
     },
     {
       "name": "flixel",
       "type": "git",
-      "dir": null,
-      "ref": "5.5.0",
-      "url": "https://github.com/MobilePorting/flixel"
+      "ref": "master",
+      "url": "https://github.com/AliAlafandy/flixel-alafandy"
     },
     {
       "name": "flixel-addons",
@@ -41,21 +38,19 @@
       "type": "git",
       "dir": null,
       "ref": "master",
-      "url": "https://github.com/MobilePorting/hxcpp"
+      "url": "https://github.com/AliAlafandy/hxcpp"
     },
     {
-      "name": "hxCodec",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/MobilePorting/hxCodec"
+      "name": "hxvlc",
+      "type": "haxelib",
+      "ref": "2.0.1",
     },
     {
       "name": "SScript",
       "type": "git",
       "dir": null,
       "ref": "main",
-      "url": "https://github.com/MobilePorting/SScript-7.7.0"
+      "url": "https://github.com/AliAlafandy/SScript"
     },
     {
       "name": "tjson",
@@ -64,17 +59,14 @@
     },
     {
       "name": "hxdiscord_rpc",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/MobilePorting/hxdiscord_rpc"
+      "type": "haxelib",
+      "version": null
     },
     {
       "name": "linc_luajit",
       "type": "git",
-      "dir": null,
       "ref": "master",
-      "url": "https://github.com/MobilePorting/linc_luajit"
+      "url": "https://github.com/AliAlafandy/linc_luajit"
     },
     {
       "name": "flxanimate",
