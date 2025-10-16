@@ -60,7 +60,7 @@ import flixel.system.FlxSound;
 #end
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.FlxPoint;
+import flixel.math.FlxPoint;
 import flixel.FlxCamera;
 import flixel.math.FlxMath;
 import flixel.util.FlxColor;
