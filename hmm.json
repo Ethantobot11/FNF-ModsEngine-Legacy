@@ -10,7 +10,7 @@
     {
       "name": "openfl",
       "type": "haxelib",
-      "ref": "9.4.1"
+      "version": "9.4.2"
     },
     {
       "name": "flixel",
@@ -44,7 +44,7 @@
     {
       "name": "hxvlc",
       "type": "haxelib",
-      "ref": "2.0.1",
+      "dir": "2.0.1"
     },
     {
       "name": "SScript",
