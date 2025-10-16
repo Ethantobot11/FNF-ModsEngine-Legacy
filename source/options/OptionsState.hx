@@ -9,18 +9,18 @@ import backend.StageData;
 
 class OptionsState extends MusicBeatState
 {
-    #if android
+    #if (android && ios)
     var options.Array<String> = ['Note Colors', 'Android Controls', 'Android Controls Settings', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
-    #end
-
-    var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
+    #else
+	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
+	#end
     private var grpOptions:FlxTypedGroup<Alphabet>;
     private static var curSelected:Int = 0;
     public static var menuBG:FlxSprite;
     public static var onPlayState:Bool = false;
 
     function openSelectedSubstate(label:String) {
-    #if android
+    #if (android && ios)
     switch(label) {
 	    case 'Note Colors':
                 openSubState(new options.NotesSubState());
@@ -36,8 +36,9 @@ class OptionsState extends MusicBeatState
                 openSubState(new options.GameplaySettingsSubState());
             case 'Adjust Delay and Combo':
                 openSubState(new options.NoteOffsetState());
-    #end
-
+            	}
+	}
+    #else
     switch(label) {
 	    case 'Note Colors':
 		openSubState(new options.NotesSubState());
@@ -53,6 +54,7 @@ class OptionsState extends MusicBeatState
 		MusicBeatState.switchState(new options.NoteOffsetState());
 	    }
 	}
+	end
 
 	var selectorLeft:Alphabet;
 	var selectorRight:Alphabet;
