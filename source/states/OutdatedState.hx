@@ -1,6 +1,6 @@
 package states;
 
-#if android
+#if (android && ios)
 import android.flixel.FlxButton
 #end
 
@@ -12,7 +12,7 @@ class OutdatedState extends MusicBeatState
 	override function create()
 	{
 
-		#if android
+		#if (android && ios)
 		addVirtualPad(NONE, A_B);
 		#end
 
@@ -22,7 +22,7 @@ class OutdatedState extends MusicBeatState
 		add(bg);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-		    #if android
+		    #if (android && ios)
 		    "
 		    Message From Mods Engine\n
 		    Sup Bro, Looks Like You're Running An\n
@@ -32,8 +32,7 @@ class OutdatedState extends MusicBeatState
 		    Press B To Ignore Anyway.\n
 		    \n
 		    Thank You For Using The Engine!"
-		    #end
-
+		    #else
 			"
 			Message From Mods Engine\n
 			Sup Bro, Looks Like You're Running An\n
@@ -43,6 +42,7 @@ class OutdatedState extends MusicBeatState
 			Press ESCAPE To Ignore Anyway.\n
 			\n
 			Thank You For Using The Engine!",
+			#end
 			32);
 		warnText.setFormat("vcr.ttf", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
