@@ -54,7 +54,7 @@ class OptionsState extends MusicBeatState
 		MusicBeatState.switchState(new options.NoteOffsetState());
 	    }
 	}
-	end
+	#end
 
 	var selectorLeft:Alphabet;
 	var selectorRight:Alphabet;
@@ -91,7 +91,7 @@ class OptionsState extends MusicBeatState
 		changeSelection();
 		ClientPrefs.saveSettings();
 		
-		#if android
+		#if (android && ios)
 		addVirtualPad(UP_DOWN, A_B_C);
 		#end
 
