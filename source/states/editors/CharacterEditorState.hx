@@ -134,8 +134,8 @@ class CharacterEditorState extends MusicBeatState
 		camFollow.screenCenter();
 		add(camFollow);
 
-        #if android
-        var tipTextArray:Array<String> = "X/Y - Camera Zoom In/Out
+        #if (android && ios)
+        var tipTextArray:Array<String> = "X/Y - Camera Zoom In/Out;
 		\nZ - Reset Camera Zoom
 		\nUP,DOWN,LEFT,RIGHT + C - Move Camera
 		\nV/D - Previous/Next Animation
@@ -145,7 +145,7 @@ class CharacterEditorState extends MusicBeatState
 		\nHold B To Move 10x Faster\n"
 		#end
 		
-		var tipTextArray:Array<String> = "E/Q - Camera Zoom In/Out
+		var tipTextArray:Array<String> = "E/Q - Camera Zoom In/Out;
 		\nR - Reset Camera Zoom
 		\nJKLI - Move Camera
 		\nW/S - Previous/Next Animation
@@ -207,7 +207,7 @@ class CharacterEditorState extends MusicBeatState
 		
 		reloadCharacterOptions();
 
-        #if android
+        #if (android && ios)
         addVirtualPad(LEFT_FULL, A_B_C_D_E_V_X_Y_Z);
         #end
         
