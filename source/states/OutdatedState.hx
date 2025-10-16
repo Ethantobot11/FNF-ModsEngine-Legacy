@@ -1,7 +1,7 @@
 package states;
 
 #if (android && ios)
-import android.flixel.FlxButton
+import android.flixel.FlxButton;
 #end
 
 class OutdatedState extends MusicBeatState
