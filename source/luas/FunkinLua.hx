@@ -34,13 +34,13 @@ import states.FreeplayState;
 import substates.PauseSubState;
 import substates.GameOverSubstate;
 
-import psychlua.LuaUtils;
-import psychlua.LuaUtils.LuaTweenOptions;
+import luas.LuaUtils;
+import luas.LuaUtils.LuaTweenOptions;
 #if (SScript >= "3.0.0")
-import psychlua.HScript;
+import luas.HScript;
 #end
-import psychlua.DebugLuaText;
-import psychlua.ModchartSprite;
+import luas.DebugLuaText;
+import luas.ModchartSprite;
 
 class FunkinLua {
 	public static var Function_Stop:Dynamic = "##PSYCHLUA_FUNCTIONSTOP";
